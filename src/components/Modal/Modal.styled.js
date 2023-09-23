@@ -14,6 +14,6 @@ export const Overlay = styled.div`
 
 
 export const StyledModal = styled.div`
-    max-width: 1000px;
-    max-height: 1000px;
+    max-width: 700px;
+    max-height: 700px;
 `;
