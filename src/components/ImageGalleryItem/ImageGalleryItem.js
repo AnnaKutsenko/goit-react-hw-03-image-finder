@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { GalleryItem, GalleryImg } from './ImageGalleryItem.styled';
+import { GalleryWrap, GalleryImg } from './ImageGalleryItem.styled';
 import { Modal } from '../Modal/Modal';
 
 export class ImageGalleryItem extends Component {
@@ -17,9 +17,9 @@ export class ImageGalleryItem extends Component {
 
         return (
             <>
-                <GalleryItem onClick={this.toogleModal}>
+                <GalleryWrap onClick={this.toogleModal}>
                     <GalleryImg src={image.webformatURL} alt={image.tags} />
-                </GalleryItem>
+                </GalleryWrap>
                 {showModal && <Modal image={image} onClose={this.toogleModal} />}
             </>
         );

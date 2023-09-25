@@ -9,7 +9,7 @@ import toast, { Toaster } from 'react-hot-toast';
 export class App extends Component {
   state = {
     query: '',
-    images: [],
+    images: [], 
     page: 1,
     isLoading: false,
     error: false,
@@ -69,7 +69,7 @@ export class App extends Component {
         <Searchbar onSubmit={this.handleSumbit} />
         <div>
           {isLoading && <Loader />}
-          {error && !isLoading && toast.error('Something went wrong, please try reloading the page', { duration: 3000, })}
+          {error && !isLoading && toast.error('OOPS! Something went wrong, please try reloading the page', { duration: 3000, })}
             <ImageGallery images={images} />
             {images.length > 0 && lastPage > 1 && !isLoading && (
               <Button onLoadMore={this.handleLoadMore} />
@@ -78,5 +78,5 @@ export class App extends Component {
         <Toaster position="top-right" />
       </>
     );
-  }
+  } 
 }
